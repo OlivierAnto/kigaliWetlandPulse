@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stop 2 | KigaliWetlandPulse</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="lang-bar">
+      <button type="button" onclick="setLang('en')" id="btn-en" class="active">English</button>
+      <button type="button" onclick="setLang('rw')" id="btn-rw">Kinyarwanda</button>
+    </div>
+    <h1>KigaliWetlandPulse</h1>
+    <p class="subtitle"
+       data-en="Trail Stop 2: Native Papyrus & Natural Water Filtration"
+       data-rw="Icyiciro cya 2: Urufunzo Kavukire n'Iyungurura ry'Amazi Kamere">
+       Trail Stop 2: Native Papyrus &amp; Natural Water Filtration
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-en="Audio Interpretation" data-rw="Ubusobanuro bw'Amajwi">
+        Audio Interpretation
+      </h2>
+      <p data-en="Listen to how native wetland plants clean Kigali's water:"
+         data-rw="Tega amatwi uko ibimera byo mu gishanga bisukura amazi y'i Kigali:">
+         Listen to how native wetland plants clean Kigali's water:
+      </p>
+      <div class="audio-box">
+        <strong data-en="Stop 2 Narration" data-rw="Icyumviro cya 2">Stop 2 Narration</strong>
+        <audio controls preload="none">
+          <source src="../assets/audio/stop2-en.mp3" type="audio/mpeg" />
+          <span data-en="Your browser does not support audio playback."
+                data-rw="Urubuga rwawe ntirushobora gucuranga amajwi.">
+                Your browser does not support audio playback.
+          </span>
+        </audio>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 data-en="Nature's Water Treatment Plant" data-rw="Uruganda Kamere Ruyungurura Amazi">
+        Nature's Water Treatment Plant
+      </h2>
+      <ul>
+        <li data-en="Dense papyrus reeds slow down fast rainwater runoff from surrounding hills, trapping soil and sediment."
+            data-rw="Urufunzo rwinshi rugabanya umuvuduko w'amazi y'imvura aturuka ku misozi, rugafata isayo n'imyanda.">
+            Dense papyrus reeds slow down fast rainwater runoff from surrounding hills, trapping soil and sediment.
+        </li>
+        <li data-en="Microorganisms living around plant roots absorb excess nutrients and pollutants before water flows downstream."
+            data-rw="Udusimba duto tuba ku mizi y'ibimera twonona imyanda n'ibihumanya amazi mbere y'uko akomeza gutemba.">
+            Microorganisms living around plant roots absorb excess nutrients and pollutants before water flows downstream.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card alert-card">
+      <h2 data-en="Responsible Visitor Tip" data-rw="Inama yo Gusura Hubahirizwa Ibidukikije">
+        Responsible Visitor Tip
+      </h2>
+      <p data-en="Do not pick papyrus stems or throw anything into the water channels—even small items disrupt water flow."
+         data-rw="Ntukice urufunzo cyangwa ngo ujugunye ikintu na kimwe mu migezi y'igishanga.">
+         Do not pick papyrus stems or throw anything into the water channels—even small items disrupt water flow.
+      </p>
+    </section>
+
+    <div class="stop-list">
+      <a href="stop-3.html" class="stop-btn">
+        <strong>Next:</strong> Stop 3 — Birdwatching Sanctuary &amp; Biodiversity →
+      </a>
+      <a href="stop-1.html" class="stop-btn">
+        ← Previous: Stop 1 — Entrance &amp; Wetland Ecosystem Overview
+      </a>
+      <a href="../index.html" class="stop-btn">
+        ⌂ Back to Visitor Information Home
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>KigaliWetlandPulse — Kigali Wetlands Park</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-rw').classList.toggle('active', lang === 'rw');
+    }
+  </script>
+</body>
+</html>
