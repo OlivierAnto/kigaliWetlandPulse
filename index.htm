@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KigaliWetlandPulse | Kigali Wetlands Park Visitor Guide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="lang-bar">
+      <button type="button" onclick="setLang('en')" id="btn-en" class="active">English</button>
+      <button type="button" onclick="setLang('rw')" id="btn-rw">Kinyarwanda</button>
+    </div>
+    <h1>KigaliWetlandPulse</h1>
+    <p class="subtitle"
+       data-en="Smart Audio & QR Visitor Guide — Kigali Wetlands Park"
+       data-rw="Uburyo Bw'ikoranabuhanga Bwo Gusura no Kumenya Pariki y'Ibishanga ya Kigali">
+       Smart Audio &amp; QR Visitor Guide — Kigali Wetlands Park
+    </p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 data-en="Visitor Information & Hours" data-rw="Amakuru ku Basura n'Amasaha">
+        Visitor Information &amp; Hours
+      </h2>
+      <ul>
+        <li data-en="Opening Hours: Daily, 6:00 AM – 6:00 PM"
+            data-rw="Amasaha yo Gufungura: Buri munsi, 6:00 za mu gitondo – 6:00 z'umugoroba">
+            Opening Hours: Daily, 6:00 AM – 6:00 PM
+        </li>
+        <li data-en="Activities: Walking, Jogging, Birdwatching, Guided Eco-Tours & Picnics"
+            data-rw="Ibikorwa: Gutembera, Kwiruka, Kureba Inyoni, Ubukerarugendo Buyobowe n'Ibiruhuko">
+            Activities: Walking, Jogging, Birdwatching, Guided Eco-Tours &amp; Picnics
+        </li>
+        <li data-en="Facilities: Visitor Center, Restrooms, Eco-Café & Rest Benches"
+            data-rw="Ibikorwaremezo: Aho Bakirira Abashyitsi, Ubwiherero, Resitora n'Intebe zo Kuruhukiraho">
+            Facilities: Visitor Center, Restrooms, Eco-Café &amp; Rest Benches
+        </li>
+      </ul>
+    </section>
+
+    <section class="card alert-card">
+      <h2 data-en="Park Etiquette & Conservation Rules" data-rw="Amabwiriza yo Kubungabunga Pariki">
+        Park Etiquette &amp; Conservation Rules
+      </h2>
+      <ul>
+        <li data-en="Stay on designated boardwalks and paved trails to protect wetland plants."
+            data-rw="Gendera mu nzira zabugenewe kugira ngo urinde ibimera byo mu gishanga.">
+            Stay on designated boardwalks and paved trails to protect wetland plants.
+        </li>
+        <li data-en="Keep noise low near birdwatching and wetland breeding zones."
+            data-rw="Gabanya urusaku hafi y'ahantu inyoni zibera.">
+            Keep noise low near birdwatching and wetland breeding zones.
+        </li>
+        <li data-en="Carry out all waste or use designated recycling bins."
+            data-rw="Shyira imyanda ahabugenewe gusa.">
+            Carry out all waste or use designated recycling bins.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 data-en="Self-Guided QR & Audio Trail Stops" data-rw="Ibice by'Urugendo Bifite QR n'Amajwi">
+        Self-Guided QR &amp; Audio Trail Stops
+      </h2>
+      <p data-en="Select a trail stop below or scan the QR marker along the path:"
+         data-rw="Hitamo igice cy'urugendo cyangwa usikane QR iri ku nzira:">
+         Select a trail stop below or scan the QR marker along the path:
+      </p>
+      <div class="stop-list">
+        <a href="stops/stop-1.html" class="stop-btn">
+          <strong>Stop 1:</strong> Entrance &amp; Wetland Ecosystem Overview →
+        </a>
+        <a href="stops/stop-2.html" class="stop-btn">
+          <strong>Stop 2:</strong> Native Papyrus &amp; Natural Water Filtration →
+        </a>
+        <a href="stops/stop-3.html" class="stop-btn">
+          <strong>Stop 3:</strong> Birdwatching Sanctuary &amp; Biodiversity →
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>KigaliWetlandPulse Prototype — BTech Tourism Management Capstone Project (RP)</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-rw').classList.toggle('active', lang === 'rw');
+    }
+  </script>
+</body>
+</html>
